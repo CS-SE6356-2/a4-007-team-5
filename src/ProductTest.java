@@ -3,6 +3,7 @@ import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class ProductTest {
 
     @org.junit.Test
@@ -36,7 +37,7 @@ public class ProductTest {
         s1.addItem(p2);
 
         // Check initial balance
-        assertEquals(150, s1.getBalance());
+        assertEquals(150, s1.getBalance(), 0);
 
         // Create another product
         Product p3 = new Product("TestProduct3", 20.00);
@@ -45,7 +46,7 @@ public class ProductTest {
         s1.addItem(p3);
 
         // Check if adding item updates cart balance correctly
-        assertEquals(170, s1.getBalance());
+        assertEquals(170, s1.getBalance(), 0);
 
 
     }
