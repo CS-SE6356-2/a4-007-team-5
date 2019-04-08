@@ -15,11 +15,47 @@ public class ProductTestRunner
         if(result.wasSuccessful())
         {
             System.out.println();
-            System.out.println("Testing was successful");
+            System.out.println("Testing for first two bullet point specifications was successful");
         }
         else
         {
-            System.out.println("Testing produced one or more failures.");
+            System.out.println();
+            System.out.println("Testing of first two bullet point specifications produced one or more failures.");
+        }
+
+        result = JUnitCore.runClasses(ProductTest.class);
+        for (Failure failure : result.getFailures())
+        {
+            System.out.println();
+            System.out.println(failure.toString());
+        }
+
+        if(result.wasSuccessful())
+        {
+            System.out.println();
+            System.out.println("Testing of third and fourth bullet point specification was successful");
+        }
+        else
+        {
+            System.out.println("Testing of third and fourth bullet point specification produced one or more failures.");
+        }
+
+        result = JUnitCore.runClasses(ShoppingCartTest2.class);
+        for (Failure failure : result.getFailures())
+        {
+            System.out.println();
+            System.out.println(failure.toString());
+        }
+
+        if(result.wasSuccessful())
+        {
+            System.out.println();
+            System.out.println("Testing of fifth bullet point specifications was successful");
+        }
+        else
+        {
+            System.out.println();
+            System.out.println("Testing of fifth bullet point specifications produced one or more failures.");
         }
     }
 }
