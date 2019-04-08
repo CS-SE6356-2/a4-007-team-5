@@ -57,5 +57,23 @@ public class ProductTestRunner
             System.out.println();
             System.out.println("Testing of fifth bullet point specifications produced one or more failures.");
         }
+        
+        result = JUnitCore.runClasses(NotFoundExceptionTest.class);
+        for (Failure failure : result.getFailures())
+        {
+            System.out.println();
+            System.out.println(failure.toString());
+        }
+
+        if(result.wasSuccessful())
+        {
+            System.out.println();
+            System.out.println("Testing of sixth bullet point specifications was successful");
+        }
+        else
+        {
+            System.out.println();
+            System.out.println("Testing of sixth bullet point specifications produced one or more failures.");
+        }
     }
 }
