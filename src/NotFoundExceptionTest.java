@@ -26,7 +26,6 @@ public class NotFoundExceptionTest {
             fail();
         }
         catch(ProductNotFoundException e){
-            System.out.println("Product not in ShoppingCart");
         }
     
     }
